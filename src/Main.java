@@ -105,6 +105,7 @@ public class Main {
         Date yourUtcDate = sdf.parse(d);
         sdf.format(yourUtcDate);
 
+
         Date date2 = Date.from(Instant.now());
         Calendar calendar = Calendar.getInstance(new SimpleTimeZone(SimpleTimeZone.UTC_TIME, "UTC"));
         calendar.setTimeInMillis(System.currentTimeMillis());
