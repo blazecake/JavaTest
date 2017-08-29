@@ -79,6 +79,7 @@ public class Main {
                 .map(Person::getFirstName)
                 .collect(Collectors.toCollection(TreeSet::new));
 
+        
         int totalSalary = javaProgrammers
                 .parallelStream()
                 .mapToInt(p -> p.getSalary())
@@ -104,7 +105,7 @@ public class Main {
         sdf.setTimeZone(new SimpleTimeZone(SimpleTimeZone.UTC_TIME, "UTC"));
         Date yourUtcDate = sdf.parse(d);
         sdf.format(yourUtcDate);
-        
+
         Date date2 = Date.from(Instant.now());
         Calendar calendar = Calendar.getInstance(new SimpleTimeZone(SimpleTimeZone.UTC_TIME, "UTC"));
         calendar.setTimeInMillis(System.currentTimeMillis());
